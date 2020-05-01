@@ -9,7 +9,7 @@ void SpawnObject(string objectName, vector position, vector orientation)
     obj.SetAffectPathgraph( true, false );
     if( obj.CanAffectPathgraph() ) GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( GetGame().UpdatePathgraphRegionByObject, 100, false, obj );
 }
-
+// test
 //#include "$CurrentDir:mpmissions\\dayzoffline.chiemsee\\BBPCementMixers.c"
 
 void main()

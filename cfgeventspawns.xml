@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <eventposdef>
+	<!--
 	<event name="VehicleGlowGlawHeli">
 		<pos x="7205.347168" z="3476.162598" a="6.940037" />
 		<pos x="8964.668945" z="4820.025879" a="16.800091" />
@@ -33,6 +34,7 @@
 		<pos x="3068" z="1764" a="0" />
 		<pos x="4796" z="1046" a="0" />
 	</event>
+	-->
 	<event name="VehicleCivilianSedan">
 		<pos x="4340" z="9372" a="0" />
 		<pos x="4032" z="9268" a="0" />

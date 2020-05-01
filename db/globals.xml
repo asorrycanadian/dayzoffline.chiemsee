@@ -18,6 +18,6 @@
     <var name="TimeLogin" type="0" value="15"/>
     <var name="TimeLogout" type="0" value="15"/>
     <var name="TimePenalty" type="0" value="20"/>
-    <var name="ZombieMaxCount" type="0" value="1000"/>
-    <var name="ZoneSpawnDist" type="0" value="300"/>
+    <var name="ZombieMaxCount" type="0" value="2000"/>
+    <var name="ZoneSpawnDist" type="0" value="800"/>
 </variables>
