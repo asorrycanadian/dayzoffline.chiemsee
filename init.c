@@ -55,8 +55,8 @@ void main()
 
 //BBPCementMixers();
 
-GetCEApi().ExportProxyData( "7500 0 7500", 15000 );			// Generate mapgrouppos.xml
-GetCEApi().ExportClusterData();								// Generate mapgroupcluster.xml
+//GetCEApi().ExportProxyData( "7500 0 7500", 15000 );			// Generate mapgrouppos.xml
+//GetCEApi().ExportClusterData();								// Generate mapgroupcluster.xml
 }
 
 class CustomMission: MissionServer
@@ -75,72 +75,50 @@ class CustomMission: MissionServer
 		Entity playerEnt;
 		playerEnt = GetGame().CreatePlayer(identity, characterName, pos, 0, "NONE");//Creates random player
 		Class.CastTo(m_player, playerEnt);
-		
+
 		GetGame().SelectPlayer(identity, m_player);
-		
+
 		return m_player;
 	}
-	
+
 	override void StartingEquipSetup(PlayerBase player, bool clothesChosen)
 	{
-
-		player.RemoveAllItems();
-
+		EntityAI itemTop;
 		EntityAI itemEnt;
 		ItemBase itemBs;
-		
-		// Setup custom classes
-		switch (Math.RandomInt(0, 8)) { 
-		case 0:
-		// Soldier
-		player.GetInventory().CreateInInventory("CombatKnife");
-		break; 
-		case 1: 
-		// Paramedic
-		player.GetInventory().CreateInInventory("SalineBagIV");
-		break; 
-		case 2: 
-		// Office worker
-		player.GetInventory().CreateInInventory("SodaCan_Cola");
-		break; 
-		case 3: 
-		// Biker
-		player.GetInventory().CreateInInventory("Matchbox");
-		break; 
-		case 4: 
-		// Hiker
-		player.GetInventory().CreateInInventory("Compass");
-		break; 
-		case 5: 
-		// Cop
-		player.GetInventory().CreateInInventory("Flashlight");
-		player.GetInventory().CreateInInventory("Battery9V");
-		break; 
-		case 6: 
-		// Lumberjack
-		player.GetInventory().CreateInInventory("Apple");
-		break; 
-		case 7: 
-		// Hood
-		player.GetInventory().CreateInInventory("KitchenKnife");
-		break; 
-		case 8: 
-		// Fireman
-		player.GetInventory().CreateInInventory("FirefighterAxe");
-		break; 
+		float rand;
+
+		itemTop = player.FindAttachmentBySlotName("Body");
+
+		if ( itemTop )
+		{
+			itemEnt = itemTop.GetInventory().CreateInInventory("Rag");
+			if ( Class.CastTo(itemBs, itemEnt ) )
+				itemBs.SetQuantity(4);
+
+			SetRandomHealth(itemEnt);
+
+			string chemlightArray[] = { "Chemlight_White", "Chemlight_Yellow", "Chemlight_Green", "Chemlight_Red" };
+			int rndIndex = Math.RandomInt(0, 4);
+			itemEnt = itemTop.GetInventory().CreateInInventory(chemlightArray[rndIndex]);
+			SetRandomHealth(itemEnt);
+
+			rand = Math.RandomFloatInclusive(0.0, 1.0);
+			if ( rand < 0.35 )
+				itemEnt = player.GetInventory().CreateInInventory("Apple");
+			else if ( rand > 0.65 )
+				itemEnt = player.GetInventory().CreateInInventory("Pear");
+			else
+				itemEnt = player.GetInventory().CreateInInventory("Plum");
+
+			SetRandomHealth(itemEnt);
+		}
 	}
-	
 	//Give universal gear
-	//player.GetInventory().CreateInInventory("Military_Sweater_Black");
-	//player.GetInventory().CreateInInventory("Kneepads_Jeans_Black");
-	//player.GetInventory().CreateInInventory("High_Knee_Sneakers");
-	player.GetInventory().CreateInInventory("Chemlight_White");
-
-	itemEnt = player.GetInventory().CreateInInventory("Rag");
-	itemBs = ItemBase.Cast(itemEnt);
-	itemBs.SetQuantity(10);
-
-	}
+	player.GetInventory().CreateInInventory("Heatpack");
+	player.GetInventory().CreateInInventory("SodaCan_Cola");
+	player.GetInventory().CreateInInventory("ChernarusMap");
+	player.GetInventory().CreateInInventory("StoneKnife");
 };
 
 Mission CreateCustomMission(string path)
