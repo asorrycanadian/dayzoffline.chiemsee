@@ -113,12 +113,12 @@ class CustomMission: MissionServer
 
 			SetRandomHealth(itemEnt);
 		}
-	}
 	//Give universal gear
 	player.GetInventory().CreateInInventory("Heatpack");
 	player.GetInventory().CreateInInventory("SodaCan_Cola");
 	player.GetInventory().CreateInInventory("ChernarusMap");
 	player.GetInventory().CreateInInventory("StoneKnife");
+	}
 };
 
 Mission CreateCustomMission(string path)
