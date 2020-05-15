@@ -37,8 +37,8 @@ void main()
 			}
 		}
 	}
-GetCEApi().ExportProxyData( "7500 0 7500", 15000 );  			// Generate mapgrouppos.xml
-GetCEApi().ExportClusterData();					// Generate mapgroupcluster.xml
+//GetCEApi().ExportProxyData( "7500 0 7500", 15000 );  			// Generate mapgrouppos.xml
+//GetCEApi().ExportClusterData();					// Generate mapgroupcluster.xml
 }
 
 class CustomMission: MissionServer
