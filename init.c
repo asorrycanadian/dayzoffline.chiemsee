@@ -1,17 +1,3 @@
-void SpawnObject(string objectName, vector position, vector orientation)
-{
-    Object obj;
-    obj = Object.Cast(GetGame().CreateObject(objectName, "0 0 0"));
-    obj.SetPosition(position);
-    obj.SetOrientation(orientation);
-    obj.SetOrientation( obj.GetOrientation() ); //Collision fix
-    obj.Update();
-    obj.SetAffectPathgraph( true, false );
-    if( obj.CanAffectPathgraph() ) GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( GetGame().UpdatePathgraphRegionByObject, 100, false, obj );
-}
-// test 2
-//#include "$CurrentDir:mpmissions\\dayzoffline.chiemsee\\BBPCementMixers.c"
-
 void main()
 {
 	//INIT WEATHER BEFORE ECONOMY INIT------------------------
@@ -27,7 +13,6 @@ void main()
 	Hive ce = CreateHive();
 	if ( ce )
 		ce.InitOffline();
-
 
 	//DATE RESET AFTER ECONOMY INIT-------------------------
 	int year, month, day, hour, minute;
@@ -52,11 +37,8 @@ void main()
 			}
 		}
 	}
-
-//BBPCementMixers();
-
-//GetCEApi().ExportProxyData( "7500 0 7500", 15000 );			// Generate mapgrouppos.xml
-//GetCEApi().ExportClusterData();								// Generate mapgroupcluster.xml
+GetCEApi().ExportProxyData( "7500 0 7500", 15000 );  			// Generate mapgrouppos.xml
+GetCEApi().ExportClusterData();					// Generate mapgroupcluster.xml
 }
 
 class CustomMission: MissionServer
@@ -113,11 +95,6 @@ class CustomMission: MissionServer
 
 			SetRandomHealth(itemEnt);
 		}
-	//Give universal gear
-	player.GetInventory().CreateInInventory("Heatpack");
-	player.GetInventory().CreateInInventory("SodaCan_Cola");
-	player.GetInventory().CreateInInventory("ChernarusMap");
-	player.GetInventory().CreateInInventory("StoneKnife");
 	}
 };
 

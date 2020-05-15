@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <events>
-	<event name="AmbientHen">
+    <event name="AmbientHen">
         <nominal>3</nominal>
         <min>0</min>
         <max>50</max>
@@ -22,7 +22,7 @@
     </event>
     <event name="AnimalBear">
         <nominal>0</nominal>
-        <min>1</min>
+        <min>2</min>
         <max>2</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
@@ -60,9 +60,9 @@
         </children>
     </event>
     <event name="AnimalDeer">
-        <nominal>5</nominal>
-        <min>1</min>
-        <max>2</max>
+        <nominal>9</nominal>
+        <min>2</min>
+        <max>4</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
         <saferadius>200</saferadius>
@@ -78,9 +78,9 @@
         </children>
     </event>
     <event name="AnimalGoat">
-        <nominal>4</nominal>
+        <nominal>8</nominal>
         <min>1</min>
-        <max>2</max>
+        <max>3</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
         <saferadius>200</saferadius>
@@ -115,9 +115,9 @@
         </children>
     </event>
     <event name="AnimalRoeDeer">
-        <nominal>6</nominal>
-        <min>1</min>
-        <max>2</max>
+        <nominal>10</nominal>
+        <min>2</min>
+        <max>3</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
         <saferadius>200</saferadius>
@@ -133,9 +133,9 @@
         </children>
     </event>
     <event name="AnimalSheep">
-        <nominal>4</nominal>
-        <min>2</min>
-        <max>4</max>
+        <nominal>5</nominal>
+        <min>4</min>
+        <max>5</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
         <saferadius>200</saferadius>
@@ -151,7 +151,7 @@
         </children>
     </event>
     <event name="AnimalWildBoar">
-        <nominal>5</nominal>
+        <nominal>7</nominal>
         <min>1</min>
         <max>3</max>
         <lifetime>180</lifetime>
@@ -168,9 +168,9 @@
         </children>
     </event>
     <event name="AnimalWolf">
-        <nominal>4</nominal>
-        <min>2</min>
-        <max>3</max>
+        <nominal>8</nominal>
+        <min>4</min>
+        <max>6</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
         <saferadius>200</saferadius>
@@ -604,7 +604,7 @@
         <flags deletable="1" init_random="0" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
-        <active>0</active>
+        <active>1</active>
         <children>
             <child lootmax="5" lootmin="3" max="10" min="10" type="Land_Wreck_Volha_Police"/>
         </children>
