@@ -3,11 +3,11 @@ void main()
 	//INIT WEATHER BEFORE ECONOMY INIT------------------------
 	Weather weather = g_Game.GetWeather();
 
-	weather.MissionWeather(false);    // false = use weather controller from Weather.c
+	weather.MissionWeather(false);	// false = use weather controller from Weather.c
 
-	weather.GetOvercast().Set( Math.RandomFloatInclusive(0.4, 0.6), 1, 0);
-	weather.GetRain().Set( 0, 0, 1);
-	weather.GetFog().Set( Math.RandomFloatInclusive(0.05, 0.1), 1, 0);
+	weather.GetOvercast().Set( Math.RandomFloatInclusive(0.02, 0.1), 1, 0);
+	weather.GetRain().Set( 0, 1, 0);
+	weather.GetFog().Set( 0, 1, 0);
 
 	//INIT ECONOMY--------------------------------------
 	Hive ce = CreateHive();
@@ -16,7 +16,7 @@ void main()
 
 	//DATE RESET AFTER ECONOMY INIT-------------------------
 	int year, month, day, hour, minute;
-	int reset_month = 9, reset_day = 20;
+	int reset_month = 8, reset_day = 10;
 	GetGame().GetWorld().GetDate(year, month, day, hour, minute);
 
 	if ((month == reset_month) && (day < reset_day))
@@ -37,12 +37,15 @@ void main()
 			}
 		}
 	}
-//GetCEApi().ExportProxyData( "7500 0 7500", 15000 );  			// Generate mapgrouppos.xml
-//GetCEApi().ExportClusterData();					// Generate mapgroupcluster.xml
+	//GetCEApi().ExportProxyData( "5120 0 5120", 11000 );  			// Generate mapgrouppos.xml
+	//GetCEApi().ExportClusterData();								// Generate mapgroupcluster.xml
 }
 
 class CustomMission: MissionServer
 {
+	// ------------------------------------------------------------
+	// SetRandomHealth
+	// ------------------------------------------------------------
 	void SetRandomHealth(EntityAI itemEnt)
 	{
 		if ( itemEnt )
@@ -51,7 +54,10 @@ class CustomMission: MissionServer
 			itemEnt.SetHealth("","",rndHlt);
 		}
 	}
-
+	
+	// ------------------------------------------------------------
+	// Override PlayerBase CreateCharacter
+	// ------------------------------------------------------------
 	override PlayerBase CreateCharacter(PlayerIdentity identity, vector pos, ParamsReadContext ctx, string characterName)
 	{
 		Entity playerEnt;
@@ -63,38 +69,50 @@ class CustomMission: MissionServer
 		return m_player;
 	}
 
+	// ------------------------------------------------------------
+	// Override StartingEquipSetup
+	// ------------------------------------------------------------
 	override void StartingEquipSetup(PlayerBase player, bool clothesChosen)
 	{
-		EntityAI itemTop;
+		EntityAI itemClothing;
 		EntityAI itemEnt;
 		ItemBase itemBs;
 		float rand;
 
-		itemTop = player.FindAttachmentBySlotName("Body");
-
-		if ( itemTop )
+		itemClothing = player.FindAttachmentBySlotName( "Body" );
+		if ( itemClothing )
 		{
-			itemEnt = itemTop.GetInventory().CreateInInventory("Rag");
-			if ( Class.CastTo(itemBs, itemEnt ) )
-				itemBs.SetQuantity(4);
+			SetRandomHealth( itemClothing );
+			
+			itemEnt = itemClothing.GetInventory().CreateInInventory( "Rag" );
+			if ( Class.CastTo( itemBs, itemEnt ) )
+				itemBs.SetQuantity( 4 );
 
-			SetRandomHealth(itemEnt);
+			SetRandomHealth( itemEnt );
 
 			string chemlightArray[] = { "Chemlight_White", "Chemlight_Yellow", "Chemlight_Green", "Chemlight_Red" };
-			int rndIndex = Math.RandomInt(0, 4);
-			itemEnt = itemTop.GetInventory().CreateInInventory(chemlightArray[rndIndex]);
-			SetRandomHealth(itemEnt);
+			int rndIndex = Math.RandomInt( 0, 4 );
+			itemEnt = itemClothing.GetInventory().CreateInInventory( chemlightArray[rndIndex] );
+			SetRandomHealth( itemEnt );
 
-			rand = Math.RandomFloatInclusive(0.0, 1.0);
+			rand = Math.RandomFloatInclusive( 0.0, 1.0 );
 			if ( rand < 0.35 )
-				itemEnt = player.GetInventory().CreateInInventory("Apple");
+				itemEnt = player.GetInventory().CreateInInventory( "Apple" );
 			else if ( rand > 0.65 )
-				itemEnt = player.GetInventory().CreateInInventory("Pear");
+				itemEnt = player.GetInventory().CreateInInventory( "Pear" );
 			else
-				itemEnt = player.GetInventory().CreateInInventory("Plum");
+				itemEnt = player.GetInventory().CreateInInventory( "Plum" );
 
-			SetRandomHealth(itemEnt);
+			SetRandomHealth( itemEnt );
 		}
+		
+		itemClothing = player.FindAttachmentBySlotName( "Legs" );
+		if ( itemClothing )
+			SetRandomHealth( itemClothing );
+		
+		itemClothing = player.FindAttachmentBySlotName( "Feet" );
+		if ( itemClothing )
+			SetRandomHealth( itemClothing );
 	}
 };
 
