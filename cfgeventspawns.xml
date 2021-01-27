@@ -12,34 +12,6 @@
 		<pos x="9042" z="9578" a="0" />
 		<pos x="8295" z="7230" a="0" />
 		<pos x="8076" z="6273" a="0" />
-		<!--Neue spawns-->
-		<pos x="4548" z="1837" a="0" />
-		<pos x="3247" z="3880" a="0" />
-		<pos x="6633" z="3950" a="0" />
-		<pos x="8844" z="7546" a="0" />
-		<pos x="8823" z="8712" a="0" />
-		<pos x="3115" z="8415" a="0" />
-		<pos x="2288" z="8557" a="0" />
-		<pos x="1995" z="4820" a="0" />
-		<pos x="2583" z="5828" a="0" />
-		<pos x="3210" z="5293" a="0" />
-		<pos x="6108" z="5958" a="0" />
-		<pos x="8284" z="6043" a="0" />
-		<pos x="8502" z="6369" a="0" />
-		<pos x="8890" z="7187" a="0" />
-		<pos x="9444" z="8886" a="0" />
-		<pos x="9015" z="9592" a="0" />
-		<pos x="8425" z="9804" a="0" />
-		<pos x="6385" z="9341" a="0" />
-		<pos x="5008" z="8635" a="0" />
-		<pos x="2169" z="8925" a="0" />
-		<pos x="1843" z="8232" a="0" />
-		<pos x="3219" z="5249" a="0" />
-		<pos x="2842" z="4838" a="0" />
-		<pos x="2977" z="8738" a="0" />
-		<pos x="4420" z="1730" a="0" />
-		<pos x="3038" z="2989" a="0" />
-		<pos x="1791" z="3404" a="0" />
 	</event>
 	<event name="VehicleSedan02">
 		<pos x="7048" z="6564" a="0" />
@@ -74,63 +46,29 @@
 		<pos x="5408" z="8521" a="0" />
 	</event>
     <event name="StaticHeliCrash">
-		<pos x="2592" z="13572" a="0" />
-		<pos x="3000" z="13776" a="0" />
-		<pos x="3364" z="14028" a="0" />
-		<pos x="3920" z="14856" a="0" />
-		<pos x="4144" z="15836" a="0" />
-		<pos x="3768" z="15900" a="0" />
-		<pos x="5636" z="13892" a="0" />
-		<pos x="6376" z="13840" a="0" />
-		<pos x="7660" z="13856" a="0" />
-		<pos x="8704" z="14224" a="0" />
-		<pos x="9356" z="14400" a="0" />
-		<pos x="9996" z="15416" a="0" />
-		<pos x="10460" z="13896" a="0" />
-		<pos x="9828" z="13704" a="0" />
-		<pos x="9740" z="12984" a="0" />
-		<pos x="10348" z="12856" a="0" />
-		<pos x="9936" z="12312" a="0" />
-		<pos x="9744" z="11984" a="0" />
-		<pos x="11572" z="13432" a="0" />
-		<pos x="11388" z="13120" a="0" />
-		<pos x="14240" z="14300" a="0" />
-		<pos x="13992" z="13760" a="0" />
-		<pos x="13620" z="13488" a="0" />
-		<pos x="13440" z="13056" a="0" />
-		<pos x="15300" z="14984" a="0" />
-		<pos x="14908" z="13820" a="0" />
-		<pos x="14396" z="12524" a="0" />
-		<pos x="13780" z="11212" a="0" />
-		<pos x="13356" z="11356" a="0" />
-		<pos x="13372" z="9576" a="0" />
-		<pos x="13012" z="9444" a="0" />
-		<pos x="11780" z="8372" a="0" />
-		<pos x="11452" z="9360" a="0" />
-		<pos x="10964" z="9148" a="0" />
-		<pos x="14324" z="8156" a="0" />
-		<pos x="14296" z="7732" a="0" />
-		<pos x="14156" z="7524" a="0" />
-		<pos x="13172" z="7036" a="0" />
-		<pos x="13072" z="6952" a="0" />
-		<pos x="10248" z="6964" a="0" />
-		<pos x="10736" z="6444" a="0" />
-		<pos x="10788" z="5672" a="0" />
-		<pos x="10156" z="6344" a="0" />
+		<zone smin="1" smax="3" dmin="3" dmax="5" r="45" />
+		<!--HeliCrash Spawns by RaG Tyson-->
 		<pos x="6396" z="3772" a="0" />
 		<pos x="4556" z="5060" a="0" />
 		<pos x="3984" z="5044" a="0" />
 		<pos x="3264" z="4408" a="0" />
 		<pos x="4372" z="3160" a="0" />
 		<pos x="4628" z="2884" a="0" />
-		<pos x="6004" z="1992" a="0" />
-		<pos x="6964" z="1808" a="0" />
-		<pos x="7916" z="1772" a="0" />
-		<pos x="10384" z="1180" a="0" />
-		<pos x="12696" z="1116" a="0" />
-		<pos x="15184" z="1292" a="0" />
-		<pos x="15804" z="1552" a="0" />
-		<pos x="16148" z="1900" a="0" />
+		<pos x="2647" z="4717" a="0" />
+		<pos x="2552" z="3279" a="0" />
+		<pos x="2027" z="2295" a="0" />
+		<pos x="4334" z="1041" a="0" />
+		<pos x="2130" z="6368" a="0" />
+		<pos x="4767" z="6328" a="0" />
+		<pos x="1867" z="8657" a="0" />
+		<pos x="4474" z="8761" a="0" />
+		<pos x="5002" z="7663" a="0" />
+		<pos x="6272" z="7473" a="0" />
+		<pos x="6028" z="5687" a="0" />
+		<pos x="7742" z="5983" a="0" />
+		<pos x="8541" z="8385" a="0" />
+		<pos x="7262" z="9614" a="0" />
+		<pos x="9415" z="9548" a="0" />
     </event>
 	<event name="StaticChristmasTree">
 	</event>
@@ -244,9 +182,6 @@
 		<pos x="7164.109863" z="8281.990234" a="70.770302" />
 		<pos x="7212.149902" z="7220.540039" a="36.889900" />
     </event>
-    <event name="VehicleV3S">
-		<pos x="10230" z="10220" a="1" />
-    </event>
 	<event name="ItemPlanks">
 		<pos x="1855.857666" z="3790.579346" a="2.058154" />
 		<pos x="1140.715210" z="9574.391602" a="19.288155" />
@@ -278,8 +213,34 @@
 		<pos x="9662.810547" z="8875.742188" a="7.328154" />
 		<pos x="3340.254395" z="8706.435547" a="5.013546" />
 		<pos x="3165.246826" z="8506.878906" a="16.058153" />
-		<pos x="3166.671631" z="8300.268555" a="16.058153" />
+		<pos x="3166.671631" z="8300.268555" a="16.058153" />	
     </event>
+    <event name="VehicleTruck01">
+		<!--New vehicle to do-->
+	</event>
+    <event name="VehicleTransitBus" />
+    <event name="InfectedVillage" />
+    <event name="InfectedSolitude" />
+    <event name="InfectedArmy" />
+    <event name="InfectedCity" />
+    <event name="InfectedMedic" />
+    <event name="InfectedPolice" />
+    <event name="InfectedFirefighter" />
+    <event name="InfectedPrisoner" />
+    <event name="AnimalDeer" />
+    <event name="AnimalCow" />
+    <event name="AnimalSheep" />
+    <event name="AnimalRoeDeer" />
+    <event name="AnimalWolf" />
+    <event name="AnimalWildBoar" />
+	<!-- CHIEMSEE SPECIAL EVENTS BY LUGGE -->
+	<event name="StaticVanPinkies">
+		<pos x="6400.422" z="1390.181" a="0" />
+		<pos x="4181.984863" z="2334.854004" a="0" />
+		<pos x="2300.352051" z="3292.295654" a="0" />
+		<pos x="2345.436523" z="8700.593750" a="0" />
+		<pos x="9609.717773" z="9384.740234" a="0" />
+	</event>
 	<event name="StaticSmallBoat">
 		<pos x="5050.790039" z="844.875671" a="1.185652" />
 		<pos x="5082.879395" z="1344.692505" a="1.323154" />
@@ -364,29 +325,4 @@
 		<pos x="7923.986328" z="3191.707520" a="-2.698537" />
 		<pos x="5731.320313" z="3453.391113" a="-2.719439" />
 	</event>
-	<event name="StaticVanPinkies">
-		<pos x="6400.422" z="1390.181" a="0" />
-		<pos x="4181.984863" z="2334.854004" a="0" />
-		<pos x="2300.352051" z="3292.295654" a="0" />
-		<pos x="2345.436523" z="8700.593750" a="0" />
-		<pos x="9609.717773" z="9384.740234" a="0" />
-	</event>
-    <event name="VehicleV3SChassis" >
-	</event>
-	<event name="VehicleV3SCargo" />
-    <event name="VehicleTransitBus" />
-    <event name="InfectedVillage" />
-    <event name="InfectedSolitude" />
-    <event name="InfectedArmy" />
-    <event name="InfectedCity" />
-    <event name="InfectedMedic" />
-    <event name="InfectedPolice" />
-    <event name="InfectedFirefighter" />
-    <event name="InfectedPrisoner" />
-    <event name="AnimalDeer" />
-    <event name="AnimalCow" />
-    <event name="AnimalSheep" />
-    <event name="AnimalRoeDeer" />
-    <event name="AnimalWolf" />
-    <event name="AnimalWildBoar" />
 </eventposdef>
